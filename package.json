@@ -1,11 +1,11 @@
 {
   "name": "prom-metrics",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
-    "build": "npm run clean && babel --copy-files --config-file ./configs/babel.config.js src --out-dir dist && uglifyjs dist/metrics.js -o index.min.js"
+    "build": "npm run clean && babel --copy-files --config-file ./configs/babel.config.js src --out-dir dist && uglifyjs dist/metrics.js -o index.js"
   },
   "author": "",
   "license": "ISC",

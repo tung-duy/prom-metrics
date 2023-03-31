@@ -71,3 +71,5 @@ export const checkoutsTotal = new prom.Counter({
   help: 'Total number of checkouts',
   labelNames: ['payment_method']
 })
+
+export const metrics = router;
