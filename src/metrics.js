@@ -60,7 +60,7 @@ export const startMetrics = (req, res, next) => {
 export const endMetrics = (req, res, next) => {
   const responseTimeInMs = Date.now() - res.locals.startEpoch
   httpRequestDurationMicroseconds
-    .labels(req.method, req.route.path, res.statusCode)
+    .labels(req.method, req.route?.path, res.statusCode)
     .observe(responseTimeInMs)
 
   next();
