@@ -30,7 +30,7 @@ function startMetricsServer(app) {
     // register
   });
 
-  app.get("/metrics", async (req, res) => {
+  app.get("/api/v1/metrics", async (req, res) => {
     res.set("Content-Type", prom.register.contentType);
 
     return res.send(await prom.register.metrics());
